@@ -6,8 +6,8 @@ with open('reviews.txt', 'r') as f:
 		count += 1
 		if count % 1000 == 0:
 			print(count)
-print(len(data))
-print('-------------------------')
-print(data[0])
-print('-------------------------')
-print(data[5])
+print('There are', len(data), 'comments')
+sum_len = 0
+for d in data:
+	sum_len = sum_len + len(d)
+print('Average:', sum_len / len(data), 'words per comments')
